@@ -1,10 +1,11 @@
-﻿<%@ Page Title="登入" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TravelFood.Account.Login" %>
+﻿<%@ Page Title="登入" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Account_Login" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
         <h1><%: Title %>.</h1>
     </hgroup>
+    
     <section id="loginForm">
         <h2>使用本機帳戶進行登入。</h2>
         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">

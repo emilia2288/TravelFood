@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Title="註冊外部登入" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterExternalLogin.aspx.cs" Inherits="TravelFood.Account.RegisterExternalLogin" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="RegisterExternalLogin.aspx.cs" Inherits="Account_RegisterExternalLogin" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     <hgroup class="title">
         <h1>註冊您的 <%: ProviderDisplayName %> 帳戶</h1>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="管理帳戶" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Manage.aspx.cs" Inherits="TravelFood.Account.Manage" %>
+﻿<%@ Page Title="管理帳戶" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Manage.aspx.cs" Inherits="Account_Manage" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 <%@ Import Namespace="Microsoft.AspNet.Membership.OpenAuth" %>
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
@@ -61,28 +61,24 @@
                                 <asp:Label runat="server" ID="CurrentPasswordLabel" AssociatedControlID="CurrentPassword">目前密碼</asp:Label>
                                 <asp:TextBox runat="server" ID="CurrentPassword" CssClass="passwordEntry" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="CurrentPassword"
-                                    CssClass="field-validation-error" ErrorMessage="確認密碼欄位是必要欄位。"
-                                    ValidationGroup="ChangePassword" />
+                                    CssClass="field-validation-error" ErrorMessage="確認密碼欄位是必要欄位。" />
                             </li>
                             <li>
                                 <asp:Label runat="server" ID="NewPasswordLabel" AssociatedControlID="NewPassword">新密碼</asp:Label>
                                 <asp:TextBox runat="server" ID="NewPassword" CssClass="passwordEntry" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="NewPassword"
-                                    CssClass="field-validation-error" ErrorMessage="需要新密碼。"
-                                    ValidationGroup="ChangePassword" />
+                                    CssClass="field-validation-error" ErrorMessage="需要新密碼。" />
                             </li>
                             <li>
                                 <asp:Label runat="server" ID="ConfirmNewPasswordLabel" AssociatedControlID="ConfirmNewPassword">確認新密碼</asp:Label>
                                 <asp:TextBox runat="server" ID="ConfirmNewPassword" CssClass="passwordEntry" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmNewPassword"
-                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="需要確認新密碼。"
-                                    ValidationGroup="ChangePassword" />
+                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="需要確認新密碼。" />
                                 <asp:CompareValidator runat="server" ControlToCompare="NewPassword" ControlToValidate="ConfirmNewPassword"
-                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="新密碼與確認密碼不相符。"
-                                    ValidationGroup="ChangePassword" />
+                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="新密碼與確認密碼不相符。" />
                             </li>
                         </ol>
-                        <asp:Button runat="server" CommandName="ChangePassword" Text="變更密碼" ValidationGroup="ChangePassword" />
+                        <asp:Button runat="server" CommandName="ChangePassword" Text="變更密碼" />
                     </fieldset>
                 </ChangePasswordTemplate>
             </asp:ChangePassword>

@@ -6,7 +6,7 @@ using Microsoft.AspNet.Membership.OpenAuth;
 
 namespace TravelFood
 {
-    internal static class AuthConfig
+    public static class AuthConfig
     {
         public static void RegisterOpenAuth()
         {
@@ -17,9 +17,9 @@ namespace TravelFood
             //    consumerKey: "您的 Twitter 使用者金鑰",
             //    consumerSecret: "您的 Twitter 使用者密碼");
 
-            OpenAuth.AuthenticationClients.AddFacebook(
-                appId: "258532167643224",
-                appSecret: "98a82cb064b1963a09bb6d3611582d5f");
+            //OpenAuth.AuthenticationClients.AddFacebook(
+            //    appId: "您的 Facebook 應用程式識別碼",
+            //    appSecret: "您的 Facebook 應用程式密碼");
 
             //OpenAuth.AuthenticationClients.AddMicrosoft(
             //    clientId: "您的 Microsoft 帳戶用戶端識別碼",

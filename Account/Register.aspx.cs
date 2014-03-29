@@ -7,25 +7,22 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Membership.OpenAuth;
 
-namespace TravelFood.Account
+public partial class Account_Register : Page
 {
-    public partial class Register : Page
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
-        }
+        RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
+    }
 
-        protected void RegisterUser_CreatedUser(object sender, EventArgs e)
-        {
-            FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
+    protected void RegisterUser_CreatedUser(object sender, EventArgs e)
+    {
+        FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
 
-            string continueUrl = RegisterUser.ContinueDestinationPageUrl;
-            if (!OpenAuth.IsLocalUrl(continueUrl))
-            {
-                continueUrl = "~/";
-            }
-            Response.Redirect(continueUrl);
+        string continueUrl = RegisterUser.ContinueDestinationPageUrl;
+        if (!OpenAuth.IsLocalUrl(continueUrl))
+        {
+            continueUrl = "~/";
         }
+        Response.Redirect(continueUrl);
     }
 }
