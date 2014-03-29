@@ -1,0 +1,50 @@
+﻿#map-canvas {
+    width:50%;
+    height:600px;
+    float:right;
+}
+
+#results {
+    width:50%;
+    height:600px;
+    float:left;
+    overflow:scroll;
+}
+
+.list-title { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+}
+
+.list-content {
+    width:80%;
+    float:left;
+}
+
+.list-pic {
+    width:20%;
+    height: 100px;
+    float:right;
+}
+
+#result_ul li {
+    display: inline;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.result_li:hover {
+    background-color: #c7d1d6;
+}
+
+.tr_data:hover {
+    background-color: #c7d1d6;
+}
+
+.td_content {
+    width:80%;
+}
+
+.td_pic {
+    width:20%;
+}
